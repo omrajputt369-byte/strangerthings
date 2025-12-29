@@ -1,6 +1,6 @@
 # Stranger Things Landing Page
 
-![Stranger Things Showcase](public/images/preview.png)
+![Stranger Things Showcase](src/assets/images/preview.png)
 
 A cinematic and immersive web experience inspired by *Stranger Things*. This project features a multi-page interactive journey into the Upside Down, complete with atmospheric audio, glitch effects, and smooth animations.
 

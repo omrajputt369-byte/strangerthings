@@ -1,22 +1,30 @@
 # Stranger Things Landing Page
 
-A cinematic and immersive landing page inspired by the hit series *Stranger Things*. This project showcases a visually striking hero section with smooth animations, built using modern web technologies.
+![Stranger Things Showcase](public/images/preview.png)
+
+A cinematic and immersive web experience inspired by *Stranger Things*. This project features a multi-page interactive journey into the Upside Down, complete with atmospheric audio, glitch effects, and smooth animations.
+
+## 🌟 Key Features
+
+*   **Immersive Audio Engine**: Custom audio controller that seamlessly switches tracks between the "Hawkins" and "Upside Down" dimensions.
+*   **Interactive Visuals**:
+    *   **Fire Reveal**: Use your mouse to reveal the hidden world beneath.
+    *   **Glitch Effects**: VHS-style tracking errors and chromatic aberration on text hover.
+    *   **Neon Pulse**: Breathing neon animations on interactive elements.
+*   **Multi-Page Journey**:
+    1.  **The Lab**: A mysterious entry point.
+    2.  **The Upside Down**: A dark dimension with custom particle effects.
+    3.  **Max's Escape**: A high-stakes finale featuring "Running Up That Hill".
+*   **Dynamic Particles**: Snow and ash particle systems that react to the environment.
 
 ## 🚀 Technologies Used
 
--   **[React](https://react.dev/)**: JavaScript library for building user interfaces.
--   **[Vite](https://vitejs.dev/)**: Next-generation frontend tooling for fast development.
--   **[Framer Motion](https://www.framer.com/motion/)**: Production-ready animation library for React.
--   **CSS3**: Custom styling for the authentic 80s sci-fi aesthetic.
-
-## 📂 Project Structure
-
--   `src/components/Hero.jsx`: Main hero section component.
--   `src/App.jsx`: Main application entry point.
+-   **[React](https://react.dev/)**: Component-based UI architecture.
+-   **[Vite](https://vitejs.dev/)**: Lightning-fast build tool.
+-   **[Framer Motion](https://www.framer.com/motion/)**: Complex layout transitions and spring animations.
+-   **CSS3**: Advanced keyframe animations, clip-paths, and blend modes.
 
 ## 🛠️ Getting Started
-
-Follow these steps to set up the project locally:
 
 1.  **Clone the repository:**
     ```bash
@@ -33,17 +41,6 @@ Follow these steps to set up the project locally:
     ```bash
     npm run dev
     ```
-
-4.  **Build for production:**
-    ```bash
-    npm run build
-    ```
-
-## 🎨 Features
-
--   Atmospheric background and typography.
--   Responsive layout.
--   Engaging entrance animations.
 
 ---
 *Created with React + Vite*

@@ -1,0 +1,277 @@
+.upside-down-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.upside-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/upside.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.8;
+}
+
+.upside-content {
+    position: relative;
+    z-index: 110;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+    text-align: center;
+    color: #fff;
+}
+
+.upside-title {
+    font-size: 60px;
+    color: #ff0000;
+    text-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+    margin-bottom: 20px;
+    position: relative;
+    padding: 0 20px;
+    /* Add padding to prevent clipping of shadows */
+    /* Removed textFlicker to focus on hover glitch, or keep if user wants both? keeping for now */
+    animation: textFlicker 4s infinite reverse;
+}
+
+.upside-title::before,
+.upside-title::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    /* As per reference */
+    overflow: hidden;
+    opacity: 0;
+    /* Hidden by default */
+}
+
+/* Activate on hover */
+.upside-title:hover::before {
+    left: 3px;
+    text-shadow: -2px 0 red;
+    opacity: 1;
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+.upside-title:hover::after {
+    left: -3px;
+    text-shadow: -2px 0 blue;
+    opacity: 1;
+    animation: glitch-anim-2 2s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0% {
+        clip-path: inset(10% 0 85% 0);
+    }
+
+    5% {
+        clip-path: inset(55% 0 10% 0);
+    }
+
+    10% {
+        clip-path: inset(30% 0 50% 0);
+    }
+
+    15% {
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    20% {
+        clip-path: inset(15% 0 60% 0);
+    }
+
+    25% {
+        clip-path: inset(60% 0 20% 0);
+    }
+
+    30% {
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    35% {
+        clip-path: inset(40% 0 45% 0);
+    }
+
+    40% {
+        clip-path: inset(75% 0 10% 0);
+    }
+
+    45% {
+        clip-path: inset(20% 0 50% 0);
+    }
+
+    50% {
+        clip-path: inset(50% 0 35% 0);
+    }
+
+    55% {
+        clip-path: inset(5% 0 90% 0);
+    }
+
+    60% {
+        clip-path: inset(35% 0 55% 0);
+    }
+
+    65% {
+        clip-path: inset(70% 0 15% 0);
+    }
+
+    70% {
+        clip-path: inset(25% 0 65% 0);
+    }
+
+    75% {
+        clip-path: inset(65% 0 25% 0);
+    }
+
+    80% {
+        clip-path: inset(15% 0 80% 0);
+    }
+
+    85% {
+        clip-path: inset(55% 0 10% 0);
+    }
+
+    90% {
+        clip-path: inset(45% 0 40% 0);
+    }
+
+    95% {
+        clip-path: inset(10% 0 85% 0);
+    }
+
+    100% {
+        clip-path: inset(30% 0 50% 0);
+    }
+}
+
+@keyframes glitch-anim-2 {
+    0% {
+        clip-path: inset(60% 0 10% 0);
+    }
+
+    5% {
+        clip-path: inset(10% 0 85% 0);
+    }
+
+    10% {
+        clip-path: inset(80% 0 5% 0);
+    }
+
+    15% {
+        clip-path: inset(30% 0 50% 0);
+    }
+
+    20% {
+        clip-path: inset(55% 0 10% 0);
+    }
+
+    25% {
+        clip-path: inset(15% 0 60% 0);
+    }
+
+    30% {
+        clip-path: inset(60% 0 20% 0);
+    }
+
+    35% {
+        clip-path: inset(20% 0 50% 0);
+    }
+
+    40% {
+        clip-path: inset(50% 0 35% 0);
+    }
+
+    45% {
+        clip-path: inset(75% 0 10% 0);
+    }
+
+    50% {
+        clip-path: inset(5% 0 90% 0);
+    }
+
+    55% {
+        clip-path: inset(40% 0 45% 0);
+    }
+
+    60% {
+        clip-path: inset(70% 0 15% 0);
+    }
+
+    65% {
+        clip-path: inset(25% 0 65% 0);
+    }
+
+    70% {
+        clip-path: inset(10% 0 80% 0);
+    }
+
+    75% {
+        clip-path: inset(45% 0 40% 0);
+    }
+
+    80% {
+        clip-path: inset(65% 0 25% 0);
+    }
+
+    85% {
+        clip-path: inset(35% 0 55% 0);
+    }
+
+    90% {
+        clip-path: inset(15% 0 80% 0);
+    }
+
+    95% {
+        clip-path: inset(55% 0 10% 0);
+    }
+
+    100% {
+        clip-path: inset(20% 0 50% 0);
+    }
+}
+
+.upside-desc {
+    font-size: 24px;
+    max-width: 800px;
+    margin-bottom: 40px;
+    line-height: 1.5;
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+    animation: subtleFloat 5s ease-in-out infinite alternate;
+}
+
+.return-btn {
+    padding: 15px 30px;
+    font-size: 20px;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff0000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.return-btn:hover {
+    animation: strangeGlow 2s infinite ease-in-out;
+    color: #fff;
+    transform: scale(1.02);
+}

@@ -2,8 +2,13 @@ import React, { useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import './Hero.css'
 import Navbar from './Navbar'
+import Particles from './Particles'
 
-const Hero = () => {
+const hoverAudio = new Audio('/music/hover.mp3')
+hoverAudio.loop = true
+hoverAudio.preload = 'auto'
+
+const Hero = ({ onEnter }) => {
   const heroRef = useRef(null)
   const revealRef = useRef(null)
 
@@ -37,12 +42,17 @@ const Hero = () => {
       if (!visible) {
         visible = true
         reveal.classList.add('active')
+        hero.classList.add('theme-active')
+        hoverAudio.play().catch((err) => console.log('Audio play failed:', err))
       }
     }
 
     const leave = () => {
       visible = false
       reveal.classList.remove('active')
+      hero.classList.remove('theme-active')
+      hoverAudio.pause()
+      hoverAudio.currentTime = 0
     }
 
     hero.addEventListener('mousemove', move)
@@ -51,6 +61,8 @@ const Hero = () => {
     return () => {
       hero.removeEventListener('mousemove', move)
       hero.removeEventListener('mouseleave', leave)
+      hoverAudio.pause()
+      hoverAudio.currentTime = 0
     }
   }, [])
 
@@ -72,7 +84,14 @@ const Hero = () => {
   }
 
   return (
-    <div className="hero" ref={heroRef}>
+    <motion.div
+      className="hero"
+      ref={heroRef}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      exit={{ opacity: 0 }}
+      transition={{ duration: 1 }}
+    >
       <motion.div variants={navbarVariant} initial="hidden" animate="visible">
         <Navbar />
       </motion.div>
@@ -87,23 +106,18 @@ const Hero = () => {
             a hidden world awakens beneath Hawkins.
             Some doors, once opened, can never be closed.
           </motion.p>
-          <motion.button className="st-btn" variants={item}>
+          <motion.button className="st-btn" variants={item} onClick={onEnter}>
             Enter the Upside Down
           </motion.button>
         </motion.div>
 
-        <motion.div className="right" variants={item}>
-          <h1 className="st-title">The Mind Flayer</h1>
-          <motion.p className="st-text" variants={item}>
-            Shadows creep from another dimension, consuming everything in their path.
-            Unravel the mystery and face the darkness head-on.
-            Will you survive the terror of the Upside Down?
-          </motion.p>
-        </motion.div>
+
       </motion.div>
 
-      <div className="fire-reveal" ref={revealRef}></div>
-    </div>
+      <div className="fire-reveal" ref={revealRef}>
+        <Particles />
+      </div>
+    </motion.div>
   )
 }
 

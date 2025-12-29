@@ -1,0 +1,82 @@
+.max-escape-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 100;
+    overflow: hidden;
+    background-color: #000;
+}
+
+.max-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/images/max.gif');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.9;
+}
+
+.max-content {
+    position: relative;
+    z-index: 110;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Libre Baskerville', serif;
+}
+
+.max-title {
+    font-size: 80px;
+    color: #fff;
+    text-shadow: 0 0 30px rgba(255, 0, 0, 0.9);
+    letter-spacing: 5px;
+    animation: flicker 2s infinite;
+    margin-bottom: 40px;
+}
+
+@keyframes flicker {
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        opacity: 1;
+    }
+
+    20%,
+    24%,
+    55% {
+        opacity: 0.4;
+    }
+}
+
+.restart-btn {
+    padding: 10px 30px;
+    font-size: 18px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: inherit;
+    backdrop-filter: blur(5px);
+}
+
+.restart-btn:hover {
+    animation: strangeGlow 2s infinite ease-in-out;
+    color: #fff;
+    transform: scale(1.05);
+}

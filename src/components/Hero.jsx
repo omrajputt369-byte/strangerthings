@@ -4,6 +4,8 @@ import './Hero.css'
 import Navbar from './Navbar'
 import Particles from './Particles'
 
+import v1Img from '../assets/images/v1.png'
+
 const hoverAudio = new Audio(`${import.meta.env.BASE_URL}music/hover.mp3`)
 hoverAudio.loop = true
 hoverAudio.preload = 'auto'
@@ -114,7 +116,11 @@ const Hero = ({ onEnter }) => {
 
       </motion.div>
 
-      <div className="fire-reveal" ref={revealRef}>
+      <div
+        className="fire-reveal"
+        ref={revealRef}
+        style={{ backgroundImage: `url(${v1Img})` }}
+      >
         <Particles />
       </div>
     </motion.div>

@@ -29,11 +29,12 @@
   background-position: 40% 7% !important;
   position: absolute;
   inset: 0;
-  background-image: url('../assets/images/v1.png');
   background-size: cover;
   background-position: center;
   pointer-events: none;
   opacity: 0;
+  z-index: 50;
+  /* Ensure it is on top of background */
   transition: opacity 0.55s ease;
   --tx: calc(var(--x) - 24px);
   --ty: calc(var(--y) - 18px);

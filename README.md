@@ -26,7 +26,7 @@ A cinematic and immersive web experience inspired by *Stranger Things*. This pro
 
 ## � Links
 
--   **Live Demo**: [View Live Site](https://strangerthings-site.vercel.app/) <!-- Update with actual deployment link if different -->
+-   **Live Demo**: [View Live Site](https://omrajputt369-byte.github.io/strangerthings/)
 -   **Repository**: [GitHub Repository](https://github.com/omrajputt369-byte/strangerthings.git)
 
 ## �🛠️ Getting Started

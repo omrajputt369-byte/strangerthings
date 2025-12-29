@@ -24,11 +24,16 @@ A cinematic and immersive web experience inspired by *Stranger Things*. This pro
 -   **[Framer Motion](https://www.framer.com/motion/)**: Complex layout transitions and spring animations.
 -   **CSS3**: Advanced keyframe animations, clip-paths, and blend modes.
 
-## 🛠️ Getting Started
+## � Links
+
+-   **Live Demo**: [View Live Site](https://strangerthings-site.vercel.app/) <!-- Update with actual deployment link if different -->
+-   **Repository**: [GitHub Repository](https://github.com/omrajputt369-byte/strangerthings.git)
+
+## �🛠️ Getting Started
 
 1.  **Clone the repository:**
     ```bash
-    git clone <repository-url>
+    git clone https://github.com/omrajputt369-byte/strangerthings.git
     cd stangerThings-main/vite-project
     ```
 

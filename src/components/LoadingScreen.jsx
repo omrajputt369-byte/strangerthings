@@ -1,6 +1,6 @@
-
 import React, { useEffect, useState } from 'react';
 import './LoadingScreen.css';
+import openGif from '../assets/images/open.gif';
 
 const LoadingScreen = ({ onFinished }) => {
     const [fadeOut, setFadeOut] = useState(false);
@@ -20,7 +20,7 @@ const LoadingScreen = ({ onFinished }) => {
     return (
         <div className={`loading-screen ${fadeOut ? 'fade-out' : ''}`}>
             <div className="gif-container">
-                <img src="/images/open.gif" alt="Loading..." className="loading-gif" />
+                <img src={openGif} alt="Loading..." className="loading-gif" />
                 <div className="click-hint">Click anywhere to start</div>
             </div>
         </div>

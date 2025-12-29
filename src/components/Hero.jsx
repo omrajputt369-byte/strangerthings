@@ -4,7 +4,7 @@ import './Hero.css'
 import Navbar from './Navbar'
 import Particles from './Particles'
 
-const hoverAudio = new Audio('/music/hover.mp3')
+const hoverAudio = new Audio(`${import.meta.env.BASE_URL}music/hover.mp3`)
 hoverAudio.loop = true
 hoverAudio.preload = 'auto'
 

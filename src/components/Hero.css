@@ -1,15 +1,24 @@
 .hero {
   height: 100vh;
-  background-image: url('/images/will1.webp');
+  background-image: url('../assets/images/will1.webp');
   background-size: cover;
   background-position: center;
-  position: relative;
-  overflow: hidden;
-  transition: filter 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  transition: opacity 1s ease-in-out;
 }
 
-.hero.theme-active {
-  filter: sepia(0.4) saturate(1.8) contrast(1.2) hue-rotate(-20deg);
+.hero.theme-active .hero-bg {
+  opacity: 0;
+}
+
+/* New "Upside Down" background layer */
+.hero-bg-upside {
+  background-image: url('../assets/images/v1.png');
 }
 
 .hero.theme-active .particles-canvas {
@@ -20,7 +29,7 @@
   background-position: 40% 7% !important;
   position: absolute;
   inset: 0;
-  background-image: url('/images/v1.png');
+  background-image: url('../assets/images/v1.png');
   background-size: cover;
   background-position: center;
   pointer-events: none;

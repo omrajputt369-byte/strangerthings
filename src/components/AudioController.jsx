@@ -16,9 +16,9 @@ const AudioController = ({ view }) => {
         // Determine track
         let targetSrc = '';
         if (view === 'hero' || view === 'upsideDown') {
-            targetSrc = '/music/theme.mp3';
+            targetSrc = `${import.meta.env.BASE_URL}music/theme.mp3`;
         } else if (view === 'maxEscape') {
-            targetSrc = '/music/new.mp3';
+            targetSrc = `${import.meta.env.BASE_URL}music/new.mp3`;
         }
 
         // Update source if needed
